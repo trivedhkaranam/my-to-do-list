@@ -1,0 +1,84 @@
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Default text color */
+}
+
+/* Style for individual list items */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9fafb; /* Light background for items */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    border: 1px solid #e5e7eb; /* Light border */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: all 0.2s ease-in-out; /* Smooth transitions for hover/state changes */
+}
+
+.todo-item:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Style for completed tasks */
+.todo-item.completed {
+    background-color: #ecfdf5; /* Lighter green for completed */
+    border-color: #a7f3d0; /* Green border */
+    color: #6b7280; /* Gray out text */
+}
+
+.todo-item.completed .task-text {
+    text-decoration: line-through;
+    color: #9ca3af; /* Even lighter gray for text */
+}
+
+/* Checkbox styling */
+.todo-checkbox {
+    margin-right: 0.75rem;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    accent-color: #3b82f6; /* Blue accent for checked state */
+}
+
+/* Task text styling */
+.task-text {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    cursor: pointer; /* Indicates it's clickable to toggle completion */
+    word-break: break-word; /* Ensures long text wraps */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #ef4444; /* Red background */
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem; /* Rounded corners */
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}
+
+/* SVG icon inside the delete button */
+.delete-btn svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* Hide message when tasks are present, handled by JS using 'hidden' class */
+#no-tasks-message.hidden {
+    display: none;
+}
